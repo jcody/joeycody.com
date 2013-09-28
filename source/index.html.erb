@@ -1,0 +1,27 @@
+---
+title: Testing out Middleman
+
+current_city: San Francisco
+lat: 37.788337
+lon: -122.407316
+---
+<header>
+  <div class="map-inset">
+    <%= to_coordinates(current_page.data.current_city) %>
+  </div>
+</header>
+
+
+<center>
+  <i class="icon-map-marker"></i>
+
+
+<h1>Welcome</h1>
+<h2>BRB, busy coding.</h2>
+<ul>
+  <% 5.times do |num| %>
+    <li>Count <%= num %> </li>
+  <% end %>
+</ul>
+
+</center>
