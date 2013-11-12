@@ -9,16 +9,12 @@
 
 activate :livereload
 
-activate :blog do |blog|
-  blog.prefix = 'blog'
-end
+activate :directory_indexes
 
-helpers do
-  def to_coordinates(location)
-    current_city = Geokit::Geocoders::GeonamesGeocoder.do_geocode location
-    current_city.ll
-  end
-end
+# activate :blog do |blog|
+#   blog.prefix = 'blog'
+# end
+
 
 ###
 # Page options, layouts, aliases and proxies
@@ -57,6 +53,19 @@ end
 #     "Helping"
 #   end
 # end
+
+helpers do
+  require 'date'
+  def to_coordinates(location)
+    current_city = Geokit::Geocoders::GeonamesGeocoder.do_geocode location
+    current_city.ll
+  end
+
+  def get_birthday
+    interval = (Date.today - Date.new(1991, 3, 25)).to_i / 365.0
+    interval.round(2)
+  end
+end
 
 set :css_dir, 'assets/css'
 

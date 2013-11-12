@@ -5,23 +5,61 @@ current_city: San Francisco
 lat: 37.788337
 lon: -122.407316
 ---
-<header>
-  <div class="map-inset">
-    <%= to_coordinates(current_page.data.current_city) %>
+<div class="intro">
+  <div class="container">
+    <h1>Hello...<span class="blinker">|</span></h1>
+    <h2>I'm a developer in San Francisco, CA.</h2>
+    <br>
+    <p>
+    </p>
+    <br>
+    <div class="want">
+      <%= mail_to 'joeydcody@gmail.com', "email me.", class: 'more' %>
+    </div>
+    <br>
+    <br>
   </div>
-</header>
+</div>
+
+<div class="container main">
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <div class="post">
+        <h1>One</h1>
+        <img src="<%= lorem.image('200x200') %>" />
+        <p><%= lorem.paragraph %></p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="post">
+        <h1>One</h1>
+        <img src="<%= lorem.image('200x200') %>" />
+        <p><%= lorem.paragraph %></p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="post">
+        <h1>One</h1>
+        <img src="<%= lorem.image('200x200') %>" />
+        <p><%= lorem.paragraph %></p>
+      </div>
+    </div>
+  </div><!-- /row -->
+</div><!-- /container -->
 
 
-<center>
-  <i class="icon-map-marker"></i>
+<div class="sub-call">
+  <div class="container">
+  <br>
+    <div class="row">
+    <% 4.times do %>
+      <div class="col-xs-3">
+        <img src="<%= lorem.image('50x50') %>" />
+      </div>
+    <% end %>
+    </div>
+  <br>
+  </div>
+</div>
 
-
-<h1>Welcome</h1>
-<h2>BRB, busy coding.</h2>
-<ul>
-  <% 5.times do |num| %>
-    <li>Count <%= num %> </li>
-  <% end %>
-</ul>
-
-</center>
+<div class="space"></div>

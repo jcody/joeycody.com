@@ -2,13 +2,17 @@
 <html>
   <head>    
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Middleman" %></title>
+    <title><%= current_page.data.title || "Joey Cody" %></title>
     
-    <%= stylesheet_link_tag "normalize", "all", "grid" %>
+    <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag  "all" %>
   </head>
   
-  <body class="<%= page_classes %>">
+  <body>
+
+    <%= partial "components/header" %>
     <%= yield %>
+    <%= partial "components/footer" %>
+
   </body>
 </html>

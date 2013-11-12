@@ -1,4 +1,4 @@
-module CurrentCity
+module Helpers
 	require 'geokit'
 
 	def to_coordinates

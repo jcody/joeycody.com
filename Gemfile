@@ -1,10 +1,7 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem "middleman", "~>3.1.5"
-gem "middleman-livereload", "~> 3.1.0"
+gem 'middleman'
+gem 'middleman-livereload'
 
-
-# UI Junk
-require 'susy'
-
-gem 'geokit'			# Convert address to lat/lng for mapping
+gem 'bootstrap-sass', '~> 3.0.2.0'         # Bootstrapify all the things
+gem 'geokit'                    # Convert address to lat/lng for mapping

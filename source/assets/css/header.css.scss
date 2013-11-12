@@ -1,0 +1,30 @@
+header.navbar {
+  text-shadow: 0 -1px 0 rgba(0,0,0,.15);
+  background-color: #3d4651;
+  min-height: 50px;
+  // border-color: #463265;
+  border: none;
+  box-shadow: 0 1px 0 rgba(255,255,255,.1);
+  color: #fff;
+
+  .jc {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2rem;
+    top: -2px;
+    position: relative;
+    padding-left: 5px;
+  }
+
+  nav {
+    padding: 10px 0px;
+
+    a {
+      color: #fff;
+
+      &:hover {
+        color: #f1654c;
+        text-shadow: none;
+      }
+    }
+  }
+}

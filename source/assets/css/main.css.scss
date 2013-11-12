@@ -1,0 +1,149 @@
+body {
+  background-color: #f5f5f5;
+  padding-top: 50px;
+
+  h1 {
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Myriad Pro', 'Myriad', helvetica, arial, sans-serif;
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  h2 {
+    color:#fff;
+    position: relative;
+    font-size: 35px;
+    font-family: 'Myriad Pro', 'Myriad', helvetica, arial, sans-serif;
+    text-decoration: none;
+    -webkit-text-stroke: 1px white;
+    text-shadow: 0 2px 0 #e1e1e1;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration:none;
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  dt {
+    float: left;
+    width: 90px;
+    margin-right: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #acb2bb;
+  }
+
+  i.logo { font-weight: bold; }
+}
+
+
+div.intro {
+  background-color: #f1654c;
+  padding: 20px;
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 38px;
+    font-family: 'Myriad Pro', 'Myriad', helvetica, arial, sans-serif;
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .want {
+    text-align: center;
+
+    .more {
+      color: #fff;
+      background: #f1654c;
+      padding: 5px 15px;
+      border: #fff 2px solid;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all ease 0.3s;
+      font-size: 2.0rem;
+
+      &:hover {
+        background: #fff;
+        color: #f1654c;
+      }
+    }
+  }
+}
+
+div.main {
+  padding: 60px 0;
+}
+
+
+
+div.sub-call {
+  background: #FEFEFE;
+
+
+  h1 {
+    color: #333;
+  }
+
+}
+
+div.space {
+  height: 200px;
+}
+
+
+div.post {
+  background: #FEFEFE;
+  border: 1px solid #EAEAEA;
+  padding: 15px;
+  border-radius: 2px;
+}
+
+
+@keyframes anim-blink {
+  0% { opacity: 0.0; }
+  22% { opacity: 0.0 }
+  25% { opacity: 1.0; }
+  75% { opacity: 1.0; }
+  78% { opacity: 0.0 }
+  100% { opacity: 0.0; }
+}
+
+@-webkit-keyframes anim-blink {
+  0% { opacity: 0.0; }
+  22% { opacity: 0.0 }
+  25% { opacity: 1.0; }
+  75% { opacity: 1.0; }
+  78% { opacity: 0.0 }
+  100% { opacity: 0.0; }
+}
+
+@-moz-keyframes blinker {
+  0% { opacity: 0.0; }
+  22% { opacity: 0.0 }
+  25% { opacity: 1.0; }
+  75% { opacity: 1.0; }
+  78% { opacity: 0.0 }
+  100% { opacity: 0.0; }
+}
+
+.blinker {
+  animation: anim-blink 1.5s infinite linear;
+  -webkit-animation: anim-blink 1.5s infinite linear;
+  top: -8px;
+  font-size: 50px;
+  position: relative;
+}
+
+
+
