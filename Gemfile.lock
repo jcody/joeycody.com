@@ -75,7 +75,11 @@ GEM
     mini_magick (3.6.0)
       subexec (~> 0.2.1)
     multi_json (1.8.0)
+    puma (2.6.0)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-livereload (0.3.15)
       rack
     rack-test (0.6.2)
@@ -112,3 +116,5 @@ DEPENDENCIES
   middleman
   middleman-favicon-maker
   middleman-livereload
+  puma
+  rack-contrib
