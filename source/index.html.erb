@@ -1,14 +1,14 @@
 ---
-title: Testing out Middleman
+title:
 
-current_city: San Francisco
+current_city: San Francisco, CA
 lat: 37.788337
 lon: -122.407316
 ---
 <div class="intro">
   <div class="container">
     <h1>Hello...<span class="blinker">|</span></h1>
-    <h2>I'm a developer in San Francisco, CA.</h2>
+    <h2>I'm a developer in <%= current_page.data.current_city %>.</h2>
     <br>
     <p>
     </p>
