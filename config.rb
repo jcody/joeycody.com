@@ -8,8 +8,11 @@
 # end
 
 activate :livereload
-
 activate :directory_indexes
+
+configure :build do
+  activate :favicon_maker
+end
 
 # activate :blog do |blog|
 #   blog.prefix = 'blog'
@@ -66,6 +69,8 @@ helpers do
     interval.round(2)
   end
 end
+
+set :build_dir, "tmp"
 
 set :css_dir, 'assets/css'
 

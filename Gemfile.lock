@@ -21,6 +21,8 @@ GEM
     eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    favicon_maker (0.2.3)
+      mini_magick (~> 3.5)
     ffi (1.9.0)
     fssm (0.2.10)
     geokit (1.6.7)
@@ -55,6 +57,9 @@ GEM
       rack-test (~> 0.6.1)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.3.6)
+    middleman-favicon-maker (3.3)
+      favicon_maker (~> 0.2.3)
+      middleman-core (>= 3.0.0)
     middleman-livereload (3.1.0)
       em-websocket (>= 0.2.0)
       middleman-core (>= 3.0.2)
@@ -67,6 +72,8 @@ GEM
       sprockets (~> 2.1)
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
+    mini_magick (3.6.0)
+      subexec (~> 0.2.1)
     multi_json (1.8.0)
     rack (1.5.2)
     rack-livereload (0.3.15)
@@ -89,6 +96,7 @@ GEM
     sprockets-sass (1.0.1)
       sprockets (~> 2.0)
       tilt (~> 1.1)
+    subexec (0.2.3)
     thor (0.18.1)
     tilt (1.3.7)
     uglifier (2.1.2)
@@ -102,4 +110,5 @@ DEPENDENCIES
   bootstrap-sass (~> 3.0.2.0)
   geokit
   middleman
+  middleman-favicon-maker
   middleman-livereload
