@@ -75,7 +75,6 @@ GEM
     mini_magick (3.6.0)
       subexec (~> 0.2.1)
     multi_json (1.8.0)
-    newrelic_rpm (3.6.7.159)
     puma (2.6.0)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
@@ -117,6 +116,5 @@ DEPENDENCIES
   middleman
   middleman-favicon-maker
   middleman-livereload
-  newrelic_rpm
   puma
   rack-contrib
