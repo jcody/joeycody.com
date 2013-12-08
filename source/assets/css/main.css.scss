@@ -2,6 +2,10 @@ body {
   background-color: #f5f5f5;
   padding-top: 50px;
 
+  p {
+    font-size: 12px;
+  }
+
   h1 {
     color: #fff;
     font-size: 60px;
@@ -10,12 +14,11 @@ body {
   }
 
   h2 {
-    color:#fff;
+    color: #3d4651;
     position: relative;
-    font-size: 35px;
+    font-size: 38px;
     font-family: 'Myriad Pro', 'Myriad', helvetica, arial, sans-serif;
     text-decoration: none;
-    -webkit-text-stroke: 1px white;
     text-shadow: 0 2px 0 #e1e1e1;
   }
 
@@ -27,9 +30,11 @@ body {
 
   a {
     text-decoration: none;
+    color: #f1654c;
 
     &:hover {
       text-decoration:none;
+      color: #f8a99b;
     }
   }
 
@@ -48,6 +53,8 @@ body {
   }
 
   i.logo { font-weight: bold; }
+
+  .highlight { color: #f1654c; }
 }
 
 
@@ -60,10 +67,10 @@ div.intro {
   }
 
   h2 {
+    color: #fff;
     text-align: center;
-    font-size: 38px;
-    font-family: 'Myriad Pro', 'Myriad', helvetica, arial, sans-serif;
     text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-text-stroke: 1px white;
   }
 
   .want {
@@ -89,30 +96,91 @@ div.intro {
 
 div.main {
   padding: 60px 0;
+
+  h2 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+  
+  div.project {
+    background: #FEFEFE;
+    border: 1px solid #EAEAEA;
+    padding: 15px;
+    border-radius: 2px;
+    transition: all 0.2s cubic-bezier(0.52, 0.01, 0.53, 1);
+
+    &:hover {
+      border: 1px solid #e0e0e0;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    p.description {
+      margin: 10px 3px;
+    }
+
+    div.details {
+      font-size: 12px;
+    }
+  }
 }
 
 
 
 div.sub-call {
   background: #FEFEFE;
-
+  margin-top: 50px;
+  border-top: 1px solid #EAEAEA;
+  border-bottom: 1px solid #EAEAEA;
 
   h1 {
     color: #333;
   }
 
-}
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+  }
 
-div.space {
-  height: 200px;
-}
+  .internet {
+    text-align: center;
 
+    h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    div.col-xs-3 {
+      text-align: center;
+    }
 
-div.post {
-  background: #FEFEFE;
-  border: 1px solid #EAEAEA;
-  padding: 15px;
-  border-radius: 2px;
+    a {
+      transition: all 0.1s ease-out;
+      color: #3d4651;
+
+      i {
+        display: block;
+      }
+
+      span {
+        transition: opacity 0.1s ease-out;
+        font-size: 11px;
+        opacity: 0;
+      }
+
+      &:hover {
+        color: #f1654c;
+        margin-top: 20px;
+
+        span {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
 
 
@@ -150,6 +218,3 @@ div.post {
   font-size: 50px;
   position: relative;
 }
-
-
-
