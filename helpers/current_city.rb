@@ -1,7 +1,9 @@
 module Helpers
-	require 'geokit'
+  module CurrentCity
+  	require "geokit"
 
-	def to_coordinates
-		@current_city = Geokit::Geocoders::GeonamesGeocoder.do_geocode "#{self}"
-	end
+  	def to_coordinates
+  		Geokit::Geocoders::GeonamesGeocoder.do_geocode "#{self}"
+  	end
+  end
 end

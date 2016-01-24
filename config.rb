@@ -15,7 +15,7 @@ configure :build do
 end
 
 # activate :blog do |blog|
-#   blog.prefix = 'blog'
+#   blog.prefix = "blog"
 # end
 
 
@@ -57,39 +57,19 @@ end
 #   end
 # end
 
-helpers do
-  require 'date'
-  def to_coordinates(location)
-    current_city = Geokit::Geocoders::GeonamesGeocoder.do_geocode location
-    current_city.ll
-  end
-
-  def get_birthday
-    interval = (Date.today - Date.new(1991, 3, 25)).to_i / 365.0
-    interval.round(2)
-  end
-end
+require "helpers"
 
 set :build_dir, "tmp"
-
-set :css_dir, 'assets/css'
-
-set :js_dir, 'assets/js'
-
-set :images_dir, 'assets/img'
+set :css_dir, "assets/css"
+set :js_dir, "assets/js"
+set :images_dir, "assets/img"
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
+  activate :minify_javascript
 
-  # Minify Javascript on build
-  # activate :minify_javascript
 
-  # Enable cache buster
-  # activate :asset_hash
-
-  # Use relative URLs
   activate :relative_assets
 
   # Or use a different image path
