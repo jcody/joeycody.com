@@ -35,11 +35,10 @@ set :images_dir, "assets/images"
 
 # Build-specific configuration
 configure :build do
-  activate :favicon_maker
   activate :minify_css
   activate :minify_javascript
-
   activate :relative_assets
+  activate :favicon_maker
 end
 
 # Development-specific configuration
