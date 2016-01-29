@@ -38,7 +38,10 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :relative_assets
-  activate :favicon_maker
+
+  activate :favicon_maker, icons: {
+    "favicon_base.png" => [{ icon: "favicon.ico", size: "64x64,32x32,24x24,16x16" }]
+  }
 end
 
 # Development-specific configuration
