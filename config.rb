@@ -4,7 +4,6 @@ activate :blog do |blog|
 #   # This will add a prefix to all links, template references and source paths
 #   blog.prefix = "blog"
 
-#   # blog.permalink = "{year}/{month}/{day}/{title}.html"
 #   # Matcher for blog source files
 #   # blog.sources = "{year}-{month}-{day}-{title}.html"
 #   # blog.taglink = "tags/{tag}.html"
@@ -25,6 +24,7 @@ activate :blog do |blog|
 #   # blog.page_link = "page/{num}"
 
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
+  blog.permalink = "{title}.html"
   blog.taglink = "tag/{tag}.html"
   blog.layout = "post"
   # blog.summary_separator = /(READMORE)/
@@ -61,7 +61,8 @@ config[:meta] = {
     website: 'http://www.joeycody.com/', # Optional
     gravatar_email: 'joeydcody@gmail.com', # Optional
     twitter: '@joeycdy' # Optional
-  }
+  },
+  back_to_blog: true
 }
 
 proxy "/author/#{config.meta[:author][:name].parameterize}.html",
@@ -70,6 +71,8 @@ proxy "/author/#{config.meta[:author][:name].parameterize}.html",
 
 # Pretty URLs as Directory Indexes, instead of file extensions
 activate :directory_indexes
+
+page "/blog-index.html", :layout => "ghost_layout"
 
 # Set build and assets directories
 set :build_dir, "tmp"

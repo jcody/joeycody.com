@@ -1,9 +1,17 @@
-desc "Pings PING_URL to keep a dyno alive"
-task :dyno_ping do
-  require "net/http"
+namespace :posts do
+  desc "Create a new blog post"
+  task :new, :title do |t, args|
+    abort "Error: You must pass in a name for the post." unless args[:title]
 
-  if ENV['PING_URL']
-    uri = URI(ENV['PING_URL'])
-    Net::HTTP.get_response(uri)
+    post_name = post_name(args[:title])
+    sh "touch ./source/posts/#{post_name}; subl ./source/posts/#{post_name}"
   end
+end
+
+def post_name(title)
+  date = Date.today.strftime('%Y-%m-%d')
+  file_type = ".html.markdown"
+  title = title.downcase.split(" ").join("-")
+
+  "#{date}-" + "#{title}" + "#{file_type}"
 end

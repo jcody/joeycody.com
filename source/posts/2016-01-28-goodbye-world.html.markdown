@@ -1,6 +1,6 @@
 ---
-title: Example Article
-date: 2012-01-01
+title: Goodbye World
+date: 2016-1-28
 ---
 
 Factory Girl

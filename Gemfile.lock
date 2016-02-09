@@ -120,6 +120,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (10.4.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -151,6 +152,7 @@ DEPENDENCIES
   nokogiri (~> 1.6.7.1)
   puma (~> 2.15.3)
   rack-contrib (~> 1.4.0)
+  rake (= 10.4.2)
   redcarpet (~> 3.3.4)
 
 BUNDLED WITH

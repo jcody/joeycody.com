@@ -4,9 +4,8 @@
       - if blog_settings.logo.present?
         %a.blog-logo{href: home_path}
           = image_tag blog_settings.logo, alt: blog_settings.name
-      -# if blog_settings.navigation
-        %a.menu-button.icon-menu{href: '#'}
-          %span.word Menu
+      %a.menu-button.icon-arrow-left{href: '/blog'}
+        %span.word All Posts
 
   %main.content{role: :main}
     %article.post
@@ -15,8 +14,6 @@
         %section.post-meta
           %time.post-date{datetime: current_article.date.strftime('%Y-%m-%d')}
             = current_article.date.strftime(blog_settings.date_format)
-          - if tags?
-            on #{tags}
 
       %section.post-content= yield
 
@@ -32,10 +29,6 @@
           %p
           - if blog_author.bio.present?
             = blog_author.bio
-          - else
-            Read
-            %a{href: author_path} more posts
-            by this author.
 
           - if blog_author.location.present? || blog_author.website.present?
             .author-meta

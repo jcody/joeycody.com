@@ -1,6 +1,6 @@
 ---
-title: Example Article
-date: 2012-01-01
+title: Number 3 Example Article
+date: 2015-06-06
 ---
 
 Factory Girl

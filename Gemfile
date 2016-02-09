@@ -23,3 +23,4 @@ gem 'nokogiri', '~> 1.6.7.1'
 
 # Extras
 gem 'geokit', '~> 1.10.0'
+gem 'rake', '10.4.2'

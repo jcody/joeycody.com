@@ -20,15 +20,15 @@ module PostHelper
       title << ": #{current_resource.metadata[:locals]['tagname']}"
     elsif current_page.data.title
       title << ": #{current_page.data.title}"
-    elsif is_blog_article?
-      title << ": #{current_article.title}"
+    elsif is_blog_post?
+      title << ": #{current_post.title}"
     end
     title
   end
 
   def page_description
-    if is_blog_article?
-      body = strip_tags(current_article.body).gsub(/\s+/, ' ')
+    if is_blog_post?
+      body = strip_tags(current_post.body).gsub(/\s+/, ' ')
       truncate(body, length: 147)
     else
       blog_settings.description
@@ -36,7 +36,7 @@ module PostHelper
   end
 
   def page_class
-    if is_blog_article? || current_page.data.layout == 'page'
+    if is_blog_post? || current_page.data.layout == 'page'
       'post-template'
     elsif current_resource.metadata[:locals]['page_number'].to_i > 1
       'archive-template'
@@ -45,13 +45,13 @@ module PostHelper
     end
   end
 
-  def summary(article)
-    summary_length = article.blog_options[:summary_length]
-    strip_tags(article.summary(summary_length, ''))
+  def summary(post)
+    summary_length = post.blog_options[:summary_length]
+    strip_tags(post.summary(summary_length, ''))
   end
 
-  def read_next_summary(article, words)
-    body = strip_tags(article.body)
+  def read_next_summary(post, words)
+    body = strip_tags(post.body)
     truncate_words(body, length: words, omission: '')
   end
 
@@ -59,21 +59,21 @@ module PostHelper
     current_resource.metadata[:locals]['page_type'] == 'tag'
   end
 
-  def tags?(article = current_article)
-    article.tags.present?
+  def tags?(post = current_post)
+    post.tags.present?
   end
 
-  def tags(article = current_article, separator = ', ')
+  def tags(post = current_post, separator = ', ')
     capture_haml do
-      article.tags.each do |tag|
+      post.tags.each do |tag|
         haml_tag(:a, tag, href: tag_path(tag))
-        haml_concat(separator) unless article.tags.last == tag
+        haml_concat(separator) unless post.tags.last == tag
       end
     end.gsub("\n", '')
   end
 
-  def current_article_url
-    URI.join(blog_settings.url, current_article.url)
+  def current_post_url
+    URI.join(blog_settings.url, current_post.url)
   end
 
   def cover(page = current_page)
@@ -96,16 +96,16 @@ module PostHelper
   end
 
   def twitter_url
-    "https://twitter.com/intent/tweet?text=#{current_article.title}" \
-      "&amp;url=#{current_article_url}"
+    "https://twitter.com/intent/tweet?text=#{current_post.title}" \
+      "&amp;url=#{current_post_url}"
   end
 
   def facebook_url
-    "https://www.facebook.com/sharer/sharer.php?u=#{current_article_url}"
+    "https://www.facebook.com/sharer/sharer.php?u=#{current_post_url}"
   end
 
   def google_plus_url
-    "https://plus.google.com/share?url=#{current_article_url}"
+    "https://plus.google.com/share?url=#{current_post_url}"
   end
 
   def feed_path
@@ -124,8 +124,8 @@ module PostHelper
   end
 
   def og_type
-    if is_blog_article?
-      'article'
+    if is_blog_post?
+      'post'
     else
       'website'
     end
@@ -136,8 +136,8 @@ module PostHelper
       current_page.data.title
     elsif is_tag_page?
       current_resource.metadata[:locals]['tagname']
-    elsif is_blog_article?
-      current_article.title
+    elsif is_blog_post?
+      current_post.title
     else
       nil
     end
