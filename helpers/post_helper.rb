@@ -83,6 +83,7 @@ module PostHelper
       { class: 'no-cover' }
     end
   end
+
   def cover?(page = current_page)
     page.data.cover.present?
   end
@@ -91,6 +92,7 @@ module PostHelper
     md5 = Digest::MD5.hexdigest(blog_author.gravatar_email.downcase)
     "https://www.gravatar.com/avatar/#{md5}?size=#{size}"
   end
+
   def gravatar?
     blog_author.gravatar_email.present?
   end
@@ -119,6 +121,7 @@ module PostHelper
   def home_path
     "#{blog.options.prefix.to_s}/"
   end
+
   def author_path
     "#{blog.options.prefix.to_s}/author/#{blog_author.name.parameterize}/"
   end
@@ -136,8 +139,6 @@ module PostHelper
       current_page.data.title
     elsif is_tag_page?
       current_resource.metadata[:locals]['tagname']
-    elsif is_blog_post?
-      current_post.title
     else
       nil
     end
