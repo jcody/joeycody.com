@@ -23,5 +23,9 @@ should force heroku to run the ruby app and compile the middleman static site. H
 Currently using a free SSL certificate from [Let's Encrypt](https://letsencrypt.org/). The certificate is valid for 90-days by default, and thus must be renewed to remain valid. The [Certbot](https://certbot.eff.org/) homebrew package makes that easy:
 
 ```shell
+# Try to renew all certificates in non-interactive mode.
+sudo certbot renew
+
+# If that doesn't work, use the interactive mode.
 sudo certbot certonly --manual -d joeycody.com
 ```
