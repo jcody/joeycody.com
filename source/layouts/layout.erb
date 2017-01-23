@@ -4,7 +4,11 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Joey Cody" %></title>
 
+    <%= javascript_include_tag "vendor/google_analytics" %>
+    <%= javascript_include_tag "vendor/clearbit" %>
+    <script async src="https://ga.clearbit.com/v1/ga.js?authorization=pk_63a6c53dd00033e091a8242d2448e468"></script>
     <script src="https://use.typekit.net/shz2qoo.js"></script>
+
     <%= javascript_include_tag  "base" %>
     <%= stylesheet_link_tag "base" %>
   </head>
