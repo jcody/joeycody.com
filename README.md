@@ -5,15 +5,15 @@ Personal site built with [Middleman](https://middlemanapp.com/).
 To create local copy:
 
 ```shell
-$ bundle exec middleman build
+bundle exec middleman build
 ```
-Static site should have been generated in the `/tmp` directory. Preview with `$ open tmp/index.html`.
+Static site should have been generated in the `/tmp` directory. Preview with `open tmp/index.html`.
 
 ### Deployment
 Heroku should be added as a git remote url. Then a quick:
 
 ```shell
-$ git push heroku master
+git push heroku master
 ```
 
 should force heroku to run the ruby app and compile the middleman static site. Hopefully [joeycody.herokuapp.com](https://joeycody.herokuapp.com) isn't too broken.
@@ -23,5 +23,9 @@ should force heroku to run the ruby app and compile the middleman static site. H
 Currently using a free SSL certificate from [Let's Encrypt](https://letsencrypt.org/). The certificate is valid for 90-days by default, and thus must be renewed to remain valid. The [Certbot](https://certbot.eff.org/) homebrew package makes that easy:
 
 ```shell
-$ sudo certbot certonly --manual -d joeycody.com
+# Try to renew all certificates in non-interactive mode.
+sudo certbot renew
+
+# If that doesn't work, use the interactive mode.
+sudo certbot certonly --manual -d joeycody.com
 ```
