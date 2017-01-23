@@ -8,11 +8,15 @@ header.navbar {
   color: #fff;
 
   .jc {
-    font-family: 'Roboto Slab', serif;
-    font-size: 2rem;
+    // font-family: 'lft-etica', sans-serif;
+    // font-size: 2rem;
     top: -2px;
     position: relative;
     padding-left: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 1;
   }
 
   nav {
@@ -28,7 +32,7 @@ header.navbar {
     }
 
     ul {
-      font-family: 'Roboto Slab', serif;
+      font-family: 'lft-etica', sans-serif;
       padding-top: 5px;
     }
   }
