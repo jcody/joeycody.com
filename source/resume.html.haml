@@ -3,24 +3,30 @@
     %h2 Resume
 
 .resume
-  .section.summary
-    %p.label Software Engineer @ AnyPerk
-    %p
-    %p I develop web and mobile applications. Some of those apps include Honolulu Answers, SexInfo Online and CabSG. Languages I like to talk dirty in are Ruby/Rails, Javascript, SQL/Postgres and PHP.
+  -# .section.summary
+  -#   %p.label Software Engineer @ AnyPerk
+  -#   %p
+  -#   %p I develop web and mobile applications. Some of those apps include Honolulu Answers, SexInfo Online and CabSG. Languages I like to talk dirty in are Ruby/Rails, Javascript, SQL/Postgres and PHP.
+
   .section
     %h2 Work Experience
 
     %ul.section-items
       %li.section-item
-        %h3 AnyPerk
+        %a.link{ href: "https://anyperk.com" }
+          %h3 AnyPerk
+          %i.fa.fa-external-link
         %div.secondary
           %span Software Engineer
           %span.separator= "|"
           %span Mar, 2016 - Current
           %p Architected authentication service that generates and validates tokens used across all clients for every authenticated API request. Currently hitting ~7ms response times for validating tokens, and ~25ms for generating new user/client tokens.
+          %p Also working on improving CI tools, breaking out other small services and have interviewed 40+ candidates.
 
       %li.section-item
-        %h3 HotelTonight
+        %a.link{ href: "https://www.hoteltonight.com" }
+          %h3 HotelTonight
+          %i.fa.fa-external-link
         %div.secondary
           %span Platform Engineer
           %span.separator= "|"
@@ -28,15 +34,19 @@
           %p Developer focused on architecting API’s for mobile developers to consume. Built promotional CRM platforms, hotel-facing inventory management systems and our ranking algorithm. Led charges to cut response times 50%+ and our CI build times drastically.
 
       %li.section-item
-        %h3 Code for America
+        %a.link{ href: "https://www.codeforamerica.org" }
+          %h3 Code for America
+          %i.fa.fa-external-link
         %div.secondary
           %span Google Summer of Code Engineer
           %span.separator= "|"
           %span 2012 - 2014
-          %p Rails developer at Code for America. Helped create http://answers.honolulu.gov and https://textizen.com.
+          %p= "Rails developer at Code for America. Helped create #{link_to "Honolulu Answers", "https://hnlgovanswers.herokuapp.com/"} and #{link_to "Textizen", "https://textizen.com"}."
+
 
       %li.section-item
-        %h3 CollisionBuzz
+        %a.link
+          %h3 CollisionBuzz
         %div.secondary
           %span PHP Developer
           %span.separator= "|"

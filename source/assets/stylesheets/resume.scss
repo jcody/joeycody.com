@@ -38,6 +38,14 @@ body {
     margin-top: 20px;
     margin-bottom: 80px;
 
+    a.link {
+        display: flex;
+        color: inherit;
+        i {
+            margin-left: 8px;
+            margin-top: 2px;
+        }
+    }
 }
 .resume p {
     font-weight: 300;
@@ -104,7 +112,13 @@ body {
 }
 .resume .section.summary {
     margin-top: 45px;
-    color: #96999b
+    color: #96999b;
+
+    p {
+        font-family: "lft-etica", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
 }
 .resume .section.summary .label {
     color: #323336;
@@ -126,7 +140,14 @@ body {
     -ms-flex-pack: left;
     justify-content: left;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    font-family: "lft-etica", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+    p {
+        color: #333333;
+    }
 }
 .resume .secondary .separator {
     padding: 0 6px

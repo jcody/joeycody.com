@@ -5,156 +5,158 @@ current_city: San Francisco, CA
 lat: 37.788337
 lon: -122.407316
 ---
-<div class="intro">
-  <div class="container">
-    <h1>Hello...<span class="blinker">|</span></h1>
-    <h2>I'm a Software Engineer in <%= current_page.data.current_city %>.</h2>
+<div class="homepage">
+  <div class="intro">
+    <div class="container">
+      <h1>Hello...<span class="blinker">|</span></h1>
+      <h2>I'm a Software Engineer in <%= current_page.data.current_city %>.</h2>
+      <br>
+      <p>
+      </p>
+      <br>
+      <div class="row">
+        <div class="want col-xs-2 col-xs-offset-4">
+          <%= link_to 'resume.', "/resume", class: 'more' %>
+        </div>
+        <div class="want col-xs-2">
+          <%= mail_to 'joeydcody@gmail.com', "email me.", class: 'more' %>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>
+  </div>
+
+  <div class="sub-call">
+    <div class="container">
     <br>
-    <p>
-    </p>
+      <div class="row">
+        <div class="col-sm-6">
+          <h3 class="intro-text current">Currently, I hack on Ruby apps at <%= link_to 'AnyPerk', 'https://anyperk.com', class: 'highlight' %>.</h3>
+        </div>
+        <div class="internet col-sm-6">
+          <h3 class="intro-text">I'm on the internet, too.</h3>
+          <div class="row">
+            <div class="col-xs-2 col-xs-offset-2">
+              <a href="http://github.com/JCody">
+                <div class="meta"><i class="fa fa-2x fa-github"></i>
+                  <span class="meta">@jcody</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-2">
+              <a href="http://www.linkedin.com/in/joeycody">
+                <div class="meta"><i class="fa fa-2x fa-linkedin-square"></i>
+                  <span class="meta">Joey Cody</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-2">
+              <a href="https://twitter.com/joeycdy">
+                <div class="meta"><i class="fa fa-2x fa-twitter"></i>
+                  <span class="meta">@joeycdy</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-2">
+              <a href="https://www.facebook.com/jocoproductions">
+                <div class="meta"><i class="fa fa-2x fa-facebook"></i>
+                  <span class="meta">Joey Cody</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     <br>
+    </div>
+  </div>
+
+
+  <div class="container main">
     <div class="row">
-      <div class="want col-xs-2 col-xs-offset-3">
-        <%= mail_to 'joeydcody@gmail.com', "email me.", class: 'more' %>
+      <div class="col-xs-12">
+        <h2>Projects</h2>
       </div>
-      <div class="want col-xs-2 col-md-offset-2">
-        <%= link_to 'resume.', "/resume", class: 'more' %>
+      <div class="col-xs-12 col-md-4">
+        <div class="project">
+          <h3>Honolulu Answers</h3>
+          <img src="assets/images/hnlanswers.jpg" />
+          <p class="description">Quickly get answers about Honolulu city services. Rails site using basic NLP and AJAX requests for searching. Has since been forked and deployed in the city of <%= link_to "Oakland", 'http://answers.oaklandnet.com' %>.</p>
+          <div class="details pull-right">
+            <a href="http://answers.honolulu.gov">Honolulu Answers <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="project">
+          <h3>SexInfo Online</h3>
+          <img src="assets/images/sexinfo.png" />
+          <p class="description">Human sexuality resource that reaches over 200k MAU from 180+ countries across the world. PHP + SQL site that has been converted to Drupal.</p>
+          <div class="details pull-right">
+            <a href="http://www.soc.ucsb.edu/sexinfo/">SexInfo <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="project">
+          <h3>jekyllmap</h3>
+          <img src="assets/images/jekyllmap.png" />
+          <p class="description">Render a map using basic markdown. Jekyll converts the markdown to a GeoJSON file which is then plotted using LeafletJS.</p>
+          <div class="details pull-right">
+            <a href="https://github.com/mick/jekyllmap/tree/general">jekyllmap on Github <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
       </div>
     </div>
-    <br>
-    <br>
-  </div>
-</div>
 
-<div class="sub-call">
-  <div class="container">
-  <br>
+    <br />
+    <br />
+
     <div class="row">
-      <div class="col-sm-6">
-        <h3 class="intro-text current">Currently, I hack on Ruby apps at <%= link_to 'AnyPerk', 'https://anyperk.com', class: 'highlight' %>.</h3>
-      </div>
-      <div class="internet col-sm-6">
-        <h3 class="intro-text">I'm on the internet, too.</h3>
-        <div class="row">
-          <div class="col-xs-2 col-xs-offset-2">
-            <a href="http://github.com/JCody">
-              <div class="meta"><i class="fa fa-2x fa-github"></i>
-                <span class="meta">@jcody</span>
-              </div>
-            </a>
+      <div class="col-xs-12 col-md-3">
+        <div class="project">
+          <h3 class="small-projects">CabSG</h3>
+          <p class="description">Javascript &amp; HTML5 (local storage, caching, SVG) heavy app built on top of JQuery Mobile for iOS and Android devices. Built with a team of four and packaged using PhoneGap.</p>
+          <div class="details pull-right">
+            <a href="https://play.google.com/store/apps/details?id=com.cabsg&hl=en">CabSG on Google Play <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
           </div>
-          <div class="col-xs-2">
-            <a href="http://www.linkedin.com/in/joeycody">
-              <div class="meta"><i class="fa fa-2x fa-linkedin-square"></i>
-                <span class="meta">Joey Cody</span>
-              </div>
-            </a>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <div class="project">
+          <h3 class="small-projects">RecordTrac</h3>
+          <p class="description">Built basic data visualizations using d3.js for Oakland city data. Graphs help citizens and city staff better understand Oakland records requests.</p>
+          <div class="details pull-right">
+            <a href="http://records.oaklandnet.com/">RecordTrac <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
           </div>
-          <div class="col-xs-2">
-            <a href="https://twitter.com/joeycdy">
-              <div class="meta"><i class="fa fa-2x fa-twitter"></i>
-                <span class="meta">@joeycdy</span>
-              </div>
-            </a>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <div class="project">
+          <h3 class="small-projects">CfA Brigade</h3>
+          <p class="description">Built out features for Code for America Brigades including retrieving, sanitizing and structuring data received from various API's to provide more information on specific Brigades across the US.</p>
+          <div class="details pull-right">
+            <a href="http://brigade.codeforamerica.org/">jekyllmap on Github <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
           </div>
-          <div class="col-xs-2">
-            <a href="https://www.facebook.com/jocoproductions">
-              <div class="meta"><i class="fa fa-2x fa-facebook"></i>
-                <span class="meta">Joey Cody</span>
-              </div>
-            </a>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <div class="project">
+          <h3 class="small-projects">Textizen</h3>
+          <p class="description">Javascript implementation of UI interactions, manipulating content via AJAX requests and traversing the DOM.</p>
+          <div class="details pull-right">
+            <a href="https://www.textizen.com/">Textizen <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
           </div>
+          <div class="clearfix"></div>
         </div>
       </div>
-    </div>
-  <br>
-  </div>
-</div>
-
-
-<div class="container main">
-  <div class="row">
-    <div class="col-xs-12">
-      <h2>Projects</h2>
-    </div>
-    <div class="col-xs-12 col-md-4">
-      <div class="project">
-        <h3>Honolulu Answers</h3>
-        <img src="assets/images/hnlanswers.jpg" />
-        <p class="description">Quickly get answers about Honolulu city services. Rails site using basic NLP and AJAX requests for searching. Has since been forked and deployed in the city of <%= link_to "Oakland", 'http://answers.oaklandnet.com' %>.</p>
-        <div class="details pull-right">
-          <a href="http://answers.honolulu.gov">Honolulu Answers <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-4">
-      <div class="project">
-        <h3>SexInfo Online</h3>
-        <img src="assets/images/sexinfo.png" />
-        <p class="description">Human sexuality resource that reaches over 200k MAU from 180+ countries across the world. PHP + SQL site that has been converted to Drupal.</p>
-        <div class="details pull-right">
-          <a href="http://www.soc.ucsb.edu/sexinfo/">SexInfo <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-4">
-      <div class="project">
-        <h3>jekyllmap</h3>
-        <img src="assets/images/jekyllmap.png" />
-        <p class="description">Render a map using basic markdown. Jekyll converts the markdown to a GeoJSON file which is then plotted using LeafletJS.</p>
-        <div class="details pull-right">
-          <a href="https://github.com/mick/jekyllmap/tree/general">jekyllmap on Github <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-  </div>
-
-  <br />
-  <br />
-
-  <div class="row">
-    <div class="col-xs-12 col-md-3">
-      <div class="project">
-        <h3 class="small-projects">CabSG</h3>
-        <p class="description">Javascript &amp; HTML5 (local storage, caching, SVG) heavy app built on top of JQuery Mobile for iOS and Android devices. Built with a team of four and packaged using PhoneGap.</p>
-        <div class="details pull-right">
-          <a href="https://play.google.com/store/apps/details?id=com.cabsg&hl=en">CabSG on Google Play <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-3">
-      <div class="project">
-        <h3 class="small-projects">RecordTrac</h3>
-        <p class="description">Built basic data visualizations using d3.js for Oakland city data. Graphs help citizens and city staff better understand Oakland records requests.</p>
-        <div class="details pull-right">
-          <a href="http://records.oaklandnet.com/">RecordTrac <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-3">
-      <div class="project">
-        <h3 class="small-projects">CfA Brigade</h3>
-        <p class="description">Built out features for Code for America Brigades including retrieving, sanitizing and structuring data received from various API's to provide more information on specific Brigades across the US.</p>
-        <div class="details pull-right">
-          <a href="http://brigade.codeforamerica.org/">jekyllmap on Github <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-3">
-      <div class="project">
-        <h3 class="small-projects">Textizen</h3>
-        <p class="description">Javascript implementation of UI interactions, manipulating content via AJAX requests and traversing the DOM.</p>
-        <div class="details pull-right">
-          <a href="https://www.textizen.com/">Textizen <i class="fa fa-lg fa-arrow-circle-o-right"></i></a>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-  </div><!-- /row -->
-</div><!-- /container -->
+    </div><!-- /row -->
+  </div><!-- /container -->
+</div><!-- /homepage -->
