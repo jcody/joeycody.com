@@ -13,8 +13,13 @@ lon: -122.407316
     <p>
     </p>
     <br>
-    <div class="want">
-      <%= mail_to 'joeydcody@gmail.com', "email me.", class: 'more' %>
+    <div class="row">
+      <div class="want col-xs-2 col-xs-offset-3">
+        <%= mail_to 'joeydcody@gmail.com', "email me.", class: 'more' %>
+      </div>
+      <div class="want col-xs-2 col-md-offset-2">
+        <%= link_to 'resume.', "/resume", class: 'more' %>
+      </div>
     </div>
     <br>
     <br>
