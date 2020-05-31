@@ -1,5 +1,5 @@
 ## joeycody.com
-Personal site built with [Middleman](https://middlemanapp.com/).
+Personal site built with [Middleman](https://middlemanapp.com).
 
 ### Development
 To create local copy:
