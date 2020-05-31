@@ -12,7 +12,7 @@ gem 'rack-contrib', '~> 1.4.0'
 gem 'puma', '~> 4.3'
 
 # Styles
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 
 # Code highlighting
 gem 'middleman-syntax', '~> 2.1.0'
