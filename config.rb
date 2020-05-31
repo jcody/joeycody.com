@@ -1,4 +1,5 @@
 require "helpers"
+require "bootstrap-sass"
 
 activate :blog do |blog|
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
@@ -46,6 +47,10 @@ set :images_dir, "assets/images"
 # Middleman-Syntax - https://github.com/middleman/middleman-syntax
 activate :syntax, line_numbers: false
 set :haml, { ugly: true }
+
+# Disable Haml warnings
+Haml::TempleEngine.disable_option_validator!
+
 set :markdown_engine, :redcarpet
 set :markdown,
   fenced_code_blocks: true,
