@@ -19,7 +19,7 @@ gem 'middleman-syntax', '~> 2.1.0'
 gem 'redcarpet', '~> 3.3.4'
 
 # For "summary"-Helper
-gem 'nokogiri', '~> 1.6.7.1'
+gem 'nokogiri', '~> 1.10.8'
 
 # Extras
 gem 'geokit', '~> 1.10.0'
