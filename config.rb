@@ -53,6 +53,8 @@ set :markdown,
   link_attributes: { rel: 'nofollow' },
   tables: true
 
+config[:sass_assets_paths] << Bootstrap.stylesheets_path
+
 # Build-specific configuration
 configure :build do
   activate :minify_css
