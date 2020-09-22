@@ -8,7 +8,7 @@ gem 'middleman-livereload', '~> 3.4.6'
 gem 'middleman-favicon-maker', '~> 4.0'
 
 # Heroku server config
-gem 'rack-contrib', '~> 1.4.0'
+gem 'rack-contrib'
 gem 'puma', '~> 4.3'
 
 # Styles
