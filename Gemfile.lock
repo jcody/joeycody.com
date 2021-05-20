@@ -96,7 +96,7 @@ GEM
       rouge (~> 1.0)
     mini_portile2 (2.5.1)
     minitest (5.14.2)
-    nio4r (2.5.2)
+    nio4r (2.5.7)
     nokogiri (1.11.4)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
@@ -108,7 +108,7 @@ GEM
       activesupport (>= 3.1)
     parallel (1.19.2)
     public_suffix (4.0.6)
-    puma (4.3.5)
+    puma (5.3.1)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
@@ -147,7 +147,7 @@ DEPENDENCIES
   middleman-livereload (~> 3.4.6)
   middleman-syntax (~> 2.1.0)
   nokogiri (~> 1.11.4)
-  puma (~> 4.3)
+  puma
   rack-contrib
   rake (= 12.3.3)
   redcarpet (~> 3.5.1)
