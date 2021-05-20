@@ -16,10 +16,10 @@ gem 'bootstrap-sass', '~> 3.4.1'
 
 # Code highlighting
 gem 'middleman-syntax', '~> 2.1.0'
-gem 'redcarpet', '~> 3.3.4'
+gem 'redcarpet', '~> 3.5.1'
 
 # For "summary"-Helper
-gem 'nokogiri', '~> 1.10.8'
+gem 'nokogiri', '~> 1.11.4'
 
 # Extras
 gem 'geokit', '~> 1.10.0'
